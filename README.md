@@ -6,9 +6,12 @@
 运行 AgentLM
 使用 Text-Generation-Inference 加速评测流程，启动一个 query-attack 实例：
 
-``cd docker
-docker compose -f query-attack.yml up```
-成功部署后的端口位于 30070，可以向其发送请求：
+Your can adaptively modify the code in ```create.py``` and use gpt-4 other LLMs to generate the poisoned data.
+
+    ```bash
+    cd WebShop
+    python3 create.py
+    ```
 
 “curl 127.0.0.1:30070/generate \
     -X POST \
